@@ -5,9 +5,14 @@ function agregarAmigo(){
     
     /*Valida la entrada*/
     if(amigo != ''){
-        amigos.push(amigo);
-        actualizarLista(amigo);
-        console.log(amigos);
+        /* Verifica si el amigo ya está en la lista */
+        if(amigos.includes(amigo)){
+            alert('El amigo ya está en la lista!');
+        } else{
+            amigos.push(amigo);
+            actualizarLista(amigo);
+            console.log(amigos);
+        }
     } else{
         alert('Por favor, inserte un nombre!');
     }
