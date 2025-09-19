@@ -4,8 +4,9 @@ function agregarAmigo(){
     let amigo = document.getElementById('amigo').value;
     
     /*Valida la entrada*/
-    if(amigo!=''){
-        console.log(amigo);
+    if(amigo != ''){
+        listaAmigos.push(amigo);
+        console.log(listaAmigos);
     } else{
         alert('Por favor, inserte un nombre!');
     }
