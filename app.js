@@ -1,18 +1,27 @@
-let listaAmigos = []; /* Almacena el nombre de amigos */
+let amigos = []; /* Almacena el nombre de amigos */
 
 function agregarAmigo(){
     let amigo = document.getElementById('amigo').value;
     
     /*Valida la entrada*/
     if(amigo != ''){
-        listaAmigos.push(amigo);
-        console.log(listaAmigos);
+        amigos.push(amigo);
+        actualizarLista(amigo);
+        console.log(amigos);
     } else{
         alert('Por favor, inserte un nombre!');
     }
     limpiarCaja();
+    return;
 }
 
 function limpiarCaja() {
     document.querySelector('#amigo').value = '';
+    return;
+}
+
+function actualizarLista(amigo) {
+    let elementoHTML = document.querySelector('#listaAmigos');
+    elementoHTML.innerHTML += `<li>${amigo}</li>`;
+    return;
 }
