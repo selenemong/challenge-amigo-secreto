@@ -8,5 +8,10 @@ function agregarAmigo(){
         console.log(amigo);
     } else{
         alert('Por favor, inserte un nombre!');
-    }   
+    }
+    limpiarCaja();
+}
+
+function limpiarCaja() {
+    document.querySelector('#amigo').value = '';
 }
